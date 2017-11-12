@@ -1,4 +1,4 @@
-function getReviews(searchQuery) {
+function getReviews(searchQuery, UPC) {
     if (!searchQuery)
         return;
     
@@ -72,6 +72,7 @@ function getReviews(searchQuery) {
         }else{ //no result
             console.log("webhose did not find nothin'.");
             alert("webhose did not find nothin'.");
+            walmartReviews(UPC);
         }
     });
 }

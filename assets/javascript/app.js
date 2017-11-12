@@ -37,7 +37,7 @@ $(document).ready(function () {
 			console.log(a.imageURL);
 
 
-			getReviews(searchQuery); //Runs Webhose.js, displays results in DOM.
+			getReviews(searchQuery, a.UPC); //Runs Webhose.js, displays results in DOM.
 			
 		/*
 			var BestBuyResponse = searchBestBuy(a.UPC);
@@ -111,8 +111,6 @@ $(document).ready(function () {
 	});
 
 });
-
-	}); 
     	
     	
 		//display description and photo from BustBuy.js
