@@ -27,6 +27,7 @@ $(document).ready(function() {
 			a = {
 				title: response.items[0].name,
 				UPC: response.items[0].upc,
+				rating: response.items[0].customerRating,
 				description: response.items[0].longDescription,
 				imageURL: response.items[0].largeImage
 			}
@@ -35,9 +36,11 @@ $(document).ready(function() {
 			$("#prod-title").html(`${a.title} - ${a.UPC}`);
 			$("#prod-description").html(`<p id="prod-image"><img src="${a.imageURL}" alt="${a.title}" /></p>`);
 			$("#prod-description").append(`<p>${a.description}</p>`);
+			$("#prod-wallyRate").append(`<p>Total Avg Customer Rating: ${a.rating}</p>`);
 			// console.log(a);
 			console.log(a.UPC);
 			console.log(a.title);
+			console.log(a.rating);
 			console.log(a.description);
 			console.log(a.imageURL);
 
@@ -122,13 +125,6 @@ $(document).ready(function() {
 	});
 
 });
-<<<<<<< HEAD
-    	
-    	
-=======
-
-
->>>>>>> upstream/master
 		//display description and photo from BustBuy.js
 		//$("#prod-title").html(""); //pass in title variable from BestBuy.js
 		//$("#prod-description").html(""); //pass in description variable from BestBuy.js
